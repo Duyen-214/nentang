@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài thực hành</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+    .form-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      background-color: #566787;
+      transition: 0.3s;
+    }
+
+    .table-wrapper {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: #566787;
+      color: white;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f1f1;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form>
+      <h2>Form thêm sinh viên</h2>
+
+      <div class="form-group">
+        <label for="maSV">Mã sinh viên:</label>
+        <input type="text" id="maSV" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="hoTen">Họ và tên:</label>
+        <input type="text" id="hoTen" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ngaySinh">Ngày sinh:</label>
+        <input type="date" id="ngaySinh" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Giới tính:</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Nữ">
+          <label class="form-check-label" for="genderFemale">Nữ</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Nam">
+          <label class="form-check-label" for="genderMale">Nam</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="ghiChu">Ghi chú:</label>
+        <textarea class="form-control" id="ghiChu" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Thêm sinh viên</button>
+    </form>
+  </div>
+  <div class="table-wrapper">
+    <h4 class="text-center mb-4">Danh sách sinh viên</h4>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Mã SV</th>
+          <th>Họ tên</th>
+          <th>Email</th>
+          <th>Giới tính</th>
+          <th>Ngày sinh</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2251161988</td>
+          <td>Đoàn Hải Duyên</td>
+          <td>duyen123@gmail.com</td>
+          <td>Nữ</td>
+          <td>16/03/2004</td>
+          <td>
+            <a href="#" class="text-warning"><i class="material-icons">edit</i></a>
+            <a href="#" class="text-danger"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>12345678</td>
+          <td>Maria Anders</td>
+          <td>123@gmail.com</td>
+          <td>Nữ</td>
+          <td>16/07/1998</td>
+          <td>
+            <a href="#" class="text-warning"><i class="material-icons">edit</i></a>
+            <a href="#" class="text-danger"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>987654321</td>
+          <td>Fran Wilson</td>
+          <td>Madrid@gmail.com</td>
+          <td>Nam</td>
+          <td>17/07/2003</td>
+          <td>
+            <a href="#" class="text-warning"><i class="material-icons">edit</i></a>
+            <a href="#" class="text-danger"><i class="material-icons">delete</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
